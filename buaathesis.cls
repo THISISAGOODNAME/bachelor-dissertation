@@ -54,6 +54,7 @@ The LaTeX template for thesis of BUAA]
 % 直接设置反而会在只有adobefonts的情况下报错
 % \setCJKmainfont{宋体}
 \setCJKfamilyfont{hwxingkai}{STXingkai}
+% \setCJKfamilyfont{hwxingkai}{STXingkai-SC-Light}
 \newcommand{\hwxingkai}{\CJKfamily{hwxingkai}}
 \newcommand{\xiaochuhao}{\fontsize{32pt}{\baselineskip}\selectfont}
 
@@ -771,12 +772,14 @@ The LaTeX template for thesis of BUAA]
 \def\buaa@bachelor@assign@req@three{}
 \def\buaa@bachelor@assign@req@four{}
 \def\buaa@bachelor@assign@req@five{}
-\newcommand{\assignReq}[5]{
+\def\buaa@bachelor@assign@req@six{}
+\newcommand{\assignReq}[6]{
     \def\buaa@bachelor@assign@req@one{#1}
     \def\buaa@bachelor@assign@req@two{#2}
     \def\buaa@bachelor@assign@req@three{#3}
     \def\buaa@bachelor@assign@req@four{#4}
     \def\buaa@bachelor@assign@req@five{#5}
+    \def\buaa@bachelor@assign@req@six{#6}
 }
 % 工作内容
 \def\buaa@bachelor@assign@work@one{}
@@ -784,14 +787,12 @@ The LaTeX template for thesis of BUAA]
 \def\buaa@bachelor@assign@work@three{}
 \def\buaa@bachelor@assign@work@four{}
 \def\buaa@bachelor@assign@work@five{}
-\def\buaa@bachelor@assign@work@six{}
-\newcommand{\assignWork}[6]{
+\newcommand{\assignWork}[5]{
     \def\buaa@bachelor@assign@work@one{#1}
     \def\buaa@bachelor@assign@work@two{#2}
     \def\buaa@bachelor@assign@work@three{#3}
     \def\buaa@bachelor@assign@work@four{#4}
     \def\buaa@bachelor@assign@work@five{#5}
-    \def\buaa@bachelor@assign@work@six{#6}
 }
 % 参考文献
 \def\buaa@bachelor@assign@ref@one{}
@@ -802,7 +803,21 @@ The LaTeX template for thesis of BUAA]
 \def\buaa@bachelor@assign@ref@six{}
 \def\buaa@bachelor@assign@ref@seven{}
 \def\buaa@bachelor@assign@ref@eight{}
-\newcommand{\assignRef}[8]{
+\def\buaa@bachelor@assign@ref@nine{}
+
+\def\buaa@bachelor@assign@ref@ten{}
+\def\buaa@bachelor@assign@ref@eleven{}
+\def\buaa@bachelor@assign@ref@twelve{}
+\def\buaa@bachelor@assign@ref@thriteen{}
+\def\buaa@bachelor@assign@ref@fourteen{}
+
+\def\buaa@bachelor@assign@ref@fifteen{}
+\def\buaa@bachelor@assign@ref@sixteen{}
+\def\buaa@bachelor@assign@ref@seventeen{}
+\def\buaa@bachelor@assign@ref@eighteen{}
+\def\buaa@bachelor@assign@ref@nineteen{}
+
+\newcommand{\assignRef}[9]{
     \def\buaa@bachelor@assign@ref@one{#1}
     \def\buaa@bachelor@assign@ref@two{#2}
     \def\buaa@bachelor@assign@ref@three{#3}
@@ -811,7 +826,25 @@ The LaTeX template for thesis of BUAA]
     \def\buaa@bachelor@assign@ref@six{#6}
     \def\buaa@bachelor@assign@ref@seven{#7}
     \def\buaa@bachelor@assign@ref@eight{#8}
+    \def\buaa@bachelor@assign@ref@nine{#9}
 }
+
+\newcommand{\assignRefTwo}[5]{
+    \def\buaa@bachelor@assign@ref@ten{#1}
+    \def\buaa@bachelor@assign@ref@eleven{#2}
+    \def\buaa@bachelor@assign@ref@twelve{#3}
+    \def\buaa@bachelor@assign@ref@thriteen{#4}
+    \def\buaa@bachelor@assign@ref@fourteen{#5}
+}
+
+\newcommand{\assignRefThree}[5]{
+    \def\buaa@bachelor@assign@ref@fifteen{#1}
+    \def\buaa@bachelor@assign@ref@sixteen{#2}
+    \def\buaa@bachelor@assign@ref@seventeen{#3}
+    \def\buaa@bachelor@assign@ref@eighteen{#4}
+    \def\buaa@bachelor@assign@ref@nineteen{#5}
+}
+
 % 任务书
 \def\buaa@bachelor@assign{
     \newpage
@@ -844,6 +877,7 @@ The LaTeX template for thesis of BUAA]
         \ulinel{\buaa@bachelor@assign@req@three}
         \ulinel{\buaa@bachelor@assign@req@four}
         \ulinel{\buaa@bachelor@assign@req@five}
+        \ulinel{\buaa@bachelor@assign@req@six}
         \stepcounter{assign}
         \Roman{assign}、毕业设计（论文）工作内容： \\[2.5ex]
         \ulinel{\buaa@bachelor@assign@work@one}
@@ -851,7 +885,6 @@ The LaTeX template for thesis of BUAA]
         \ulinel{\buaa@bachelor@assign@work@three}
         \ulinel{\buaa@bachelor@assign@work@four}
         \ulinel{\buaa@bachelor@assign@work@five}
-        \ulinel{\buaa@bachelor@assign@work@six}
         \newpage
         \thispagestyle{empty}
         \begin{spacing}{1.9}
@@ -866,6 +899,22 @@ The LaTeX template for thesis of BUAA]
         \ulinel{\buaa@bachelor@assign@ref@six}
         \ulinel{\buaa@bachelor@assign@ref@seven}
         \ulinel{\buaa@bachelor@assign@ref@eight}
+        \ulinel{\buaa@bachelor@assign@ref@nine}
+        \ulinel{\buaa@bachelor@assign@ref@ten}
+        \ulinel{\buaa@bachelor@assign@ref@eleven}
+        \ulinel{\buaa@bachelor@assign@ref@twelve}
+        \ulinel{\buaa@bachelor@assign@ref@thriteen}
+        \ulinel{\buaa@bachelor@assign@ref@fourteen}
+        \ulinel{\buaa@bachelor@assign@ref@fifteen}
+        \ulinel{\buaa@bachelor@assign@ref@sixteen}
+        \ulinel{\buaa@bachelor@assign@ref@seventeen}
+        \ulinel{\buaa@bachelor@assign@ref@eighteen}
+        \ulinel{\buaa@bachelor@assign@ref@nineteen}
+        \newline
+        \newline
+        \newline
+        \newline
+
         \ulinec[.28]{\buaa@school}学院\ulinec[.28]{\buaa@major}~专业类~\ulinec[.15]{\buaa@class}班 \\
         学生\ulinec[.3]{\buaa@thesisauthor} \\
         毕业设计(论文)时间：~~\ulinec[.1]{\buaa@thesisbeginyear}年\ulinec[.06]{\buaa@thesisbeginmonth}月\ulinec[.06]{\buaa@thesisbeginday}日至\ulinec[.1]{\buaa@thesisendyear}年\ulinec[.06]{\buaa@thesisendmonth}月\ulinec[.06]{\buaa@thesisendday}日 \\
