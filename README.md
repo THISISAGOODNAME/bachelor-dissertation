@@ -28,15 +28,39 @@
 \end{figure}
 ```
 
-## 5. 黑体
-
-黑体的命令是`{\heiti XXX } ` 而不是 `\heite{XXX}`
 
 单独插一张图的时候，width必须是具体长度，而不能用`width=0.35\textwidth`这种等于正文宽度百分比的方法设定
 
 
+## 6. 黑体
 
+黑体的命令是`{\heiti XXX } ` 而不是 `\heite{XXX}`
 
+## 7. 代码
+
+```
+\begin{lstlisting}[
+    language={C},
+    caption={Hello World程序的源代码},
+    label={c-hello-world-sample},
+]
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, world!");
+    return 0;
+}
+\end{lstlisting}
+```
+
+## 8. 自动引用
+
+```
+\ref{c-hello-world-sample}
+```
+
+引用和 label 要相对应
 
 # 感谢
 
