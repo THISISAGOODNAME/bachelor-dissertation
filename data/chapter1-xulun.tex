@@ -37,7 +37,6 @@ HTML5有相比传统的web有以下几个显著优势：
 \end{itemize}
 
 
-
 从 90 年代开始，客户机/服务器(Client/Server，以下简称为 C/S)结构代替了
 原来的主机/终端(Host/Terminal)结构，并且在整个 IT 发展中发挥了巨大的作用。
 但随着 Internet 的不断普及和应用的迅速升级,C/S 的应用感到有些力不从心。
@@ -96,7 +95,7 @@ Visual C++和Delphi的出现改善了开发环境，
     \centering
     \includegraphics[width=200bp]{figure/pic/model-driving-software-porting.png}
     \caption{模型驱动工程的方法进行源代码移植}
-    \label{fig-sample}
+    \label{model-driving-software-porting-sample}
 \end{figure}
 
 这一方法概述如下：首先对遗留应用的源代码进行句法分析，生成代码模型。
@@ -171,7 +170,7 @@ Leaning Technologies 公司推出了 C++向 Javascript 编译器 Duetto，既可
 LGPL 协议发布，商业不友好，开发完成程度不高，文档亦不够完善。
 
 Mozilla 公司和 Epic 公司为了将 unreal engine runtime 移植到 web 上，开
-发了基于 llvm+clang 的 C++ to Javascript 编译器, Emscripten\upcite{Emscripten: an LLVM-to-JavaScript compiler}，
+发了基于 llvm+clang 的 C++ to Javascript 编译器, Emscripten\upcite{zakai2011emscripten}，
 可以使用 c++全部特性；依靠 asm.js \upcite{herman2013asm}解释器,将 javascript 直接解释为汇编代码运行，个别
 测试效率超越 C++；支持 openGL ES 2.0 程序直接转变为 webGL \upcite{webgl20142}程序 。
 
@@ -195,18 +194,17 @@ Unity 公司在 2014 年开始 webGL 移植的实验。并使用 IL2CPP 技术�
 
 本文组织结构如下：
 
-\heiti{第 1 章 } 绪论。本章简要介绍本论文的问题背景，
+{\heiti 第 1 章 } 绪论。本章简要介绍本论文的问题背景，
 当前相关领域的研究现状以及本文的主要研究内容。
 
-\heiti{第 2 章 } luaVM。移植luaVM到html5，并实现一个纯前端的lua交互式解释器。
+{\heiti 第 2 章 } luaVM。移植luaVM到html5，并实现一个纯前端的lua交互式解释器。
 
-\heiti{第 3 章 } SQLite。移植SQLite到html5，并实现一个前端运行的数据库，
+{\heiti 第 3 章 } SQLite。移植SQLite到html5，并实现一个前端运行的数据库，
 实现数据库的CURD。
 
-\heiti{第 4 章 } box2d。移植box2d物理引擎到html5，并在canvas中使用。
+{\heiti 第 4 章 } box2d。移植box2d物理引擎到html5，并在canvas中使用。
 
-\heiti{第 5 章 } bullet physics。移植bullet物理引擎到html5，并在webgl中进行使用。
+{\heiti 第 5 章 } bullet physics。移植bullet物理引擎到html5，并在webgl中进行使用。
 
-\heiti{第 6 章 } VCGLibrary与meshlab。移植网格处理库VCGLibrary到html5，
-移植meshlab的UI。
+{\heiti 第 6 章 } VCGLibrary与meshlab。移植VCGLibrary到html5，移植meshlab的UI。
 
