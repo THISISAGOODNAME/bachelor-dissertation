@@ -1,0 +1,332 @@
+% !Mode:: "TeX:UTF-8"
+\chapter{代码列表}
+
+\begin{lstlisting}[
+    language={html},
+    caption={clang目录结构},
+    label={clang-directory-structure},
+]
+
+e1.35.0_64bit
+|── clang
+|── clang*
+|── count
+|── diagtool
+|── emscripten-version.txt
+|── llc
+|── lli
+|── lli-child-target
+|── llvm-*
+|── macho-dump
+|── not
+|── obj2yaml
+|── opt
+|── optimizer
+|── verify-uselistorder
+|── yaml-bench
+|── yaml2obj
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[
+    language={html},
+    caption={emscripten目录结构},
+    label={emscripten-directory-structure},
+]
+
+1.35.0
+├── cmake
+├── docs
+├── em++
+├── em-config
+├── emar
+├── embuilder.py
+├── emcc
+├── emcmake
+├── emconfigure
+├── emlink.py
+├── emmake
+├── emranlib
+├── emrun
+├── emscons
+├── media
+├── package.json
+├── site
+├── src
+├── system
+├── tests
+├── third_party
+└── tools
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[
+    language={html},
+    caption={lua REPL关键代码},
+    label={html-lua-repl},
+]
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>lua.vm.js REPL</title>
+    <meta ... >
+    <style>...</style>
+    <script src="js/lua.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="span7" border=1>
+          <textarea id="mytext">
+lua code
+</textarea>
+        </div>
+        <div class="span5">
+          <h4>output</h4>
+          <pre id="output"></pre>
+        </div>
+      </div>
+
+      <p><a href="#" class="btn btn-primary btn-large " onclick="executeLua(myCodeMirror.getValue(), true); return false" id="the_button">Execute &raquo;</a></p>
+
+      <div class="row-fluid">
+        <div class="span">
+      </div>
+
+    </div> <!-- /container -->
+
+
+<script src="../dist/lua.vm.js"></script>
+
+  </body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[
+    language={C++},
+    caption={box2d的webIDL文件},
+    label={idl-box2d},
+]
+[NoDelete]
+interface b2Contact {
+  b2Manifold GetManifold();
+  boolean IsTouching();
+  void SetEnabled(boolean flag);
+  boolean IsEnabled();
+  b2Contact GetNext();
+  b2Fixture GetFixtureA();
+  long GetChildIndexA();
+  b2Fixture GetFixtureB();
+  long GetChildIndexB();
+  void SetFriction(float friction);
+  float GetFriction();
+  void ResetFriction();
+  void SetRestitution(float restitution);
+  float GetRestitution();
+  void ResetRestitution();
+  void SetTangentSpeed(float speed);
+  float GetTangentSpeed();
+};
+
+[JSImplementation="b2ContactListener"]
+interface JSContactListener {
+  void JSContactListener();
+
+  void BeginContact(b2Contact contact);
+  void EndContact(b2Contact contact);
+  // TODO: Declare another b2ContactListener implementation without PreSolve/PostSolve, for efficiency (otherwise the JS implementations of these functions must get called even if unused).
+  void PreSolve(b2Contact contact, [Const] b2Manifold oldManifold);
+  void PostSolve(b2Contact contact, [Const] b2ContactImpulse impulse);
+};
+...(其他接口)
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[
+    language={C++},
+    caption={bullet物理引擎的IDL文件},
+    label={idl-bullet},
+]
+// Linear Math
+interface btVector3 {
+  void btVector3();
+  void btVector3(float x, float y, float z);
+  float length();
+  float x();
+  float y();
+  float z();
+  void setX(float x);
+  void setY(float y);
+  void setZ(float z);
+  void setValue(float x, float y, float z);
+  void normalize();
+  float dot([Ref] btVector3 v);
+  [Operator="*=", Ref] btVector3 op_mul(float x);
+  [Operator="+=", Ref] btVector3 op_add([Ref] btVector3 v);
+  [Operator="-=", Ref] btVector3 op_sub([Ref] btVector3 v);
+};
+
+interface btManifoldPoint {
+  [Const, Ref] btVector3 getPositionWorldOnA();
+  [Const, Ref] btVector3 getPositionWorldOnB();
+  [Const] double getAppliedImpulse();
+  [Const] double getDistance();
+  [Value] attribute btVector3 m_localPointA;
+  [Value] attribute btVector3 m_localPointB;
+  [Value] attribute btVector3 m_positionWorldOnB;
+  [Value] attribute btVector3 m_positionWorldOnA;
+  [Value] attribute btVector3 m_normalWorldOnB;
+};
+...(其他模块、接口)
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[
+    language={Java},
+    caption={sql在线解释器},
+    label={Online-SQL-interpreter},
+]
+var execBtn = document.getElementById("execute");
+var outputElm = document.getElementById('output');
+var errorElm = document.getElementById('error');
+var commandsElm = document.getElementById('commands');
+var dbFileElm = document.getElementById('dbfile');
+var savedbElm = document.getElementById('savedb');
+
+// Start the worker in which sql.js will run
+var worker = new Worker("../js/worker.sql.js");
+worker.onerror = error;
+
+// Open a database
+worker.postMessage({action:'open'});
+
+// Connect to the HTML element we 'print' to
+function print(text) {
+    outputElm.innerHTML = text.replace(/\n/g, '<br>');
+}
+function error(e) {
+  console.log(e);
+  errorElm.style.height = '2em';
+  errorElm.textContent = e.message;
+}
+
+function noerror() {
+    errorElm.style.height = '0';
+}
+
+// Run a command in the database
+function execute(commands) {
+  tic();
+  worker.onmessage = function(event) {
+    var results = event.data.results;
+    toc("Executing SQL");
+
+    tic();
+    outputElm.innerHTML = "";
+    for (var i=0; i<results.length; i++) {
+      outputElm.appendChild(tableCreate(results[i].columns, results[i].values));
+    }
+    toc("Displaying results");
+  }
+  worker.postMessage({action:'exec', sql:commands});
+  outputElm.textContent = "Fetching results...";
+}
+
+// Create an HTML table
+var tableCreate = function () {
+  function valconcat(vals, tagName) {
+    if (vals.length === 0) return '';
+    var open = '<'+tagName+'>', close='</'+tagName+'>';
+    return open + vals.join(close + open) + close;
+  }
+  return function (columns, values){
+    var tbl  = document.createElement('table');
+    var html = '<thead>' + valconcat(columns, 'th') + '</thead>';
+    var rows = values.map(function(v){ return valconcat(v, 'td'); });
+    html += '<tbody>' + valconcat(rows, 'tr') + '</tbody>';
+    tbl.innerHTML = html;
+    return tbl;
+  }
+}();
+
+// Execute the commands when the button is clicked
+function execEditorContents () {
+  noerror()
+  execute (editor.getValue() + ';');
+}
+execBtn.addEventListener("click", execEditorContents, true);
+
+// Performance measurement functions
+var tictime;
+if (!window.performance || !performance.now) {window.performance = {now:Date.now}}
+function tic () {tictime = performance.now()}
+function toc(msg) {
+  var dt = performance.now()-tictime;
+  console.log((msg||'toc') + ": " + dt + "ms");
+}
+
+// Add syntax highlihjting to the textarea
+var editor = CodeMirror.fromTextArea(commandsElm, {
+    mode: 'text/x-mysql',
+    viewportMargin: Infinity,
+    indentWithTabs: true,
+    smartIndent: true,
+    lineNumbers: true,
+    matchBrackets : true,
+    autofocus: true,
+    extraKeys: {
+      "Ctrl-Enter": execEditorContents,
+      "Ctrl-S": savedb,
+    }
+});
+
+// Load a db from a file
+dbFileElm.onchange = function() {
+  var f = dbFileElm.files[0];
+  var r = new FileReader();
+  r.onload = function() {
+    worker.onmessage = function () {
+      toc("Loading database from file");
+      // Show the schema of the loaded database
+      editor.setValue("SELECT `name`, `sql`\n  FROM `sqlite_master`\n  WHERE type='table';");
+      execEditorContents();
+    };
+    tic();
+    try {
+      worker.postMessage({action:'open',buffer:r.result}, [r.result]);
+    }
+    catch(exception) {
+      worker.postMessage({action:'open',buffer:r.result});
+    }
+  }
+  r.readAsArrayBuffer(f);
+}
+
+// Save the db to a file
+function savedb () {
+  worker.onmessage = function(event) {
+    toc("Exporting the database");
+    var arraybuff = event.data.buffer;
+    var blob = new Blob([arraybuff]);
+    var url = window.URL.createObjectURL(blob);
+    window.location = url;
+  };
+  tic();
+  worker.postMessage({action:'export'});
+}
+savedbElm.addEventListener("click", savedb, true);
+\end{lstlisting}

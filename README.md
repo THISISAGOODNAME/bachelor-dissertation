@@ -62,8 +62,25 @@ int main()
 
 引用和 label 要相对应
 
+## 9. 参考文献 [S.l.] 的问题
+
+先安装[这里](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
+的文献样式文件,安装
+
+之后,所有书籍,文献都记得添加
+
+```
+address={}
+```
+
+如果没有地址,则是
+
+```
+address={{}}
+```
+
 # 感谢
 
-# BUAAthesis[https://github.com/BHOSC/BUAAthesis]
+# [BUAAthesis](https://github.com/BHOSC/BUAAthesis)
 
 北航毕设论文LaTeX模板
