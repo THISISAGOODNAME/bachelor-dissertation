@@ -144,9 +144,15 @@ Sun 公司和其后继者 Oracle 一直在持续改进 Java JNI \upcite{gordon19
 编译一个 Native 版本，需要目标平台安装 Java 且开启浏览器支持。
 
 Adobe 公司为了方便传统软件向 flash 移植，开发了 flasCC 技术，该技术平
-台兼容性比较好，而且 swf 文件可以脱离浏览器单独运行。但是目标机需要安装
-flash player，移动设备现在大都不支持 flash player；而且渲染器需要重写,
-3 维软件移植需要大量重写；价格高昂；编译过程非常缓慢。
+台兼容性比较好，而且 swf 文件可以脱离浏览器单独运行。但是有几个缺点：
+
+\begin{itemize}
+    \item 目标机需要安装flash player，而移动设备现在大都不支持 flash player；
+    \item 而且渲染器需要重写；
+    \item 三维软件移植需要大量重写；
+    \item 价格高昂；
+    \item 编译过程非常缓慢。
+\end{itemize}
 
 Unity3D 公司也仿照 Adobe 公司的 flasCC 技术,推出了 unityWebPlayer 方
 案,需要浏览器支持 PPAPI,但是只能移植 unity 平台开发的游戏，并且不支持
@@ -197,13 +203,15 @@ Unity 公司在 2014 年开始 webGL 移植的实验。并使用 IL2CPP 技术�
 {\heiti 第 1 章 } 绪论。本章简要介绍传统软件向web移植的问题出现的时代背景，
 当前软件移植理论的研究现状以及本论文的主要内容。
 
-{\heiti 第 2 章 } 剖析emscripten的工具的作用，原理，以及简介webIDL技术。
+{\heiti 第 2 章 } Emscripten 结构剖析。剖析emscripten的工具的作用，原理，以及简介webIDL技术。
 
-{\heiti 第 3 章 } luaVM。移植luaVM到html5，并实现一个纯前端的lua交互式解释器。
+{\heiti 第 3 章 } LuaVM 的 web 移植。移植luaVM到html5，并实现一个纯前端的lua交互式解释器。
 
-{\heiti 第 4 章 } SQLite。移植SQLite到html5，并实现一个可以在JavaScript虚拟机中运行的运行的SQLite实例，
+{\heiti 第 4 章 } SQLite 数据库的 web 移植。移植SQLite到html5，并实现一个可以在JavaScript虚拟机中运行的运行的SQLite实例，
 并支持完整的的CURD操作。
 
-{\heiti 第 5 章 } box2d。移植box2d物理引擎到html5，并在canvas中使用。
+{\heiti 第 5 章 } Box2D 引擎的 web 移植。移植box2d物理引擎到html5，并在canvas中使用。
 
-{\heiti 第 6 章 } bullet physics。移植bullet物理引擎到html5，并在webgl中进行使用。
+{\heiti 第 6 章 } Bullet 引擎的 web 移植。移植bullet物理引擎到html5，并在webgl中进行使用。
+
+{\heiti 第 7 章 } 总结与展望。

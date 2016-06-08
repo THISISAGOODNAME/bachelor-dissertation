@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29bbcd1a-1926-483e-a2f4-5293c42ffa26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GBT7714-2005NLang_Upp.bst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/bak/chapter1-xulun副本.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/bak/chapyrer-appendix1-coderef-old.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapter2-emscripten.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapter3-lua.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapter4-sqlite.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapter5-box2d.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapter6-bullet.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapter7-conclusion.tex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/chapyrer-appendix1-coderef.tex" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/chapter2-lua.tex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/chapter3-sqlite.tex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/chapter4-box2d.tex" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buaathesis.cls" afterPath="$PROJECT_DIR$/buaathesis.cls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/figure/pic/model-driving-software-porting.png" afterPath="$PROJECT_DIR$/figure/pic/model-driving-software-porting.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/abstract.tex" afterPath="$PROJECT_DIR$/data/abstract.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/bachelor/acknowledgement.tex" afterPath="$PROJECT_DIR$/data/bachelor/acknowledgement.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/bachelor/assign.tex" afterPath="$PROJECT_DIR$/data/bachelor/assign.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/bachelor/bachelor_info.tex" afterPath="$PROJECT_DIR$/data/bachelor/bachelor_info.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/bibs.bib" afterPath="$PROJECT_DIR$/data/bibs.bib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/chapter1-xulun.tex" afterPath="$PROJECT_DIR$/data/chapter1-xulun.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/com_info.tex" afterPath="$PROJECT_DIR$/data/com_info.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample-bachelor.tex" afterPath="$PROJECT_DIR$/sample-bachelor.tex" />
     </list>
     <ignored path="bachelor-dissertation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -704,7 +679,7 @@
       <workItem from="1460599709838" duration="62000" />
       <workItem from="1460612439666" duration="48000" />
       <workItem from="1460644439277" duration="53000" />
-      <workItem from="1464660960851" duration="446000" />
+      <workItem from="1464660960851" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="#1 完成 1)用户信息 和 2)任务书信息">
       <created>1460519650038</created>
@@ -748,11 +723,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460644472327</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#7 终稿ver1.0">
+      <created>1464661516885</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1464661516885</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18084000" />
+    <option name="totallyTimeSpent" value="18168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="23" width="1351" height="837" extended-state="0" />
@@ -760,6 +741,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2751678" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -773,7 +755,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -826,7 +807,8 @@
     <MESSAGE value="#4 完成第一章 lua" />
     <MESSAGE value="#5 完成第二章 sqlite" />
     <MESSAGE value="#6 文献综述" />
-    <option name="LAST_COMMIT_MESSAGE" value="#6 文献综述" />
+    <MESSAGE value="#7 终稿ver1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="#7 终稿ver1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
