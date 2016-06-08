@@ -82,5 +82,6 @@ address={{}}
 # 感谢
 
 # [BUAAthesis](https://github.com/BHOSC/BUAAthesis)
+# [Haixing-Hu](https://github.com/Haixing-Hu)
 
 北航毕设论文LaTeX模板
